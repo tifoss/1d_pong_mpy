@@ -17,7 +17,7 @@ P2_COLOR = (0, 0, 255)
 HIT_COLOR = (255, 0, 0)
 HIT_AREA = (0, 255, 0)
 HIT_AREA_SIZE = 5
-PIXEL_COUNT = 60
+PIXEL_COUNT = 40
 DEFAULT_SPEED = 10
 HIT_TIME = 250
 MAX_SCORE = 5
@@ -38,13 +38,14 @@ def prepare_playground():
 
     for i in range(0, HIT_AREA_SIZE):
         PLAYGROUND[i] = HIT_AREA
-    for i in range((60 - HIT_AREA_SIZE), 60):
+    for i in range((PIXEL_COUNT - HIT_AREA_SIZE), PIXEL_COUNT):
         PLAYGROUND[i] = HIT_AREA
 
-    for i in range((31 - P1_SCORE), 31):
+    mid = int((PIXEL_COUNT / 2) + 1)
+    for i in range((mid - P1_SCORE), mid):
         PLAYGROUND[i] = P1_COLOR
 
-    for i in range(31, (31 + P2_SCORE)):
+    for i in range(mid, (mid + P2_SCORE)):
         PLAYGROUND[i] = P2_COLOR
 
 
@@ -261,7 +262,7 @@ def win():
     """
     Display win animation.
     """
-    global P1_SCORE, P2_SCORE    
+    global P1_SCORE, P2_SCORE
 
     start = 0
     end = int(PIXEL_COUNT / 2)
