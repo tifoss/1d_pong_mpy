@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.languageServer": "Pylance",
+		"cSpell.words": [
+			"animation",
+			"ball",
+			"button",
+			"buttons",
+			"Decide",
+			"embedded",
+			"fire",
+			"microbit",
+			"pixels",
+			"playground",
+			"PLAYGROUND",
+			"Pong",
+			"pressed",
+			"self",
+			"starts",
+			"Stubs"
+		]
+	}
+}
